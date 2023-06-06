@@ -1,4 +1,7 @@
+User.destroy_all
 Category.destroy_all
+Profile.destroy_all
+
 puts "creation de categories"
 Category.create(name: "Low")
 Category.create(name: "Medium")
@@ -7,7 +10,7 @@ Category.create(name: "Hight")
 # low = Category.find_by(name: "Low")
 # medium = Category.find_by(name: "Medium")
 # hight = Category.find_by(name: "Hight")
-User.destroy_all
+
 
 puts "creation de users"
 
@@ -18,6 +21,7 @@ Boby = User.create(email: "boby@gmail.com", password: "123456", first_name: "bob
 
 puts "creation de profiles"
 
-Tommy.profiles.create!(nickame: "Tommy", birth_date: "2000-01-01", category: Category.all.sample)
-Elise.profiles.create!(nickame: "Elise", birth_date: "2001-01-01", category: Category.all.sample)
-Boby.profiles.create!(nickame: "boby", birth_date: "2002-01-01", category: Category.all.sample)
+Tommy.profiles.create!(nickname: "Liam", birth_date: "2012-01-01", category: Category.all.sample)
+Elise.profiles.create!(nickname: "Lucia", birth_date: "2010-07-23", category: Category.all.sample)
+Elise.profiles.create!(nickname: "Esteban", birth_date: "2013-07-23", category: Category.all.sample)
+Boby.profiles.create!(nickname: "Lou", birth_date: "2016-01-01", category: Category.all.sample)
