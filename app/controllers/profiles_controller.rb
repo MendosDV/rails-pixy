@@ -29,18 +29,19 @@ class ProfilesController < ApplicationController
   end
 
   def update
-    @profile = Profile.find(params[:id])
-    if @profile.save
-      redirect_to profiles_path
-    else
-      render :edit, status: :unprocessable_entity
-    end
+    @profile.update(params_profile)
+    redirect_to profiles_path, notice: "Votre profil a bien été modifié"
+  end
+
+  def destroy
+    @profile.destroy
+    redirect_to profiles_path, notice: "Votre profil a bien été supprimé"
   end
 
   private
 
   def params_profile
-    params.require(:profile).permit(:nickname, :birth_date)
+    params.require(:profile).permit(:nickname, :birth_date, :picture)
   end
 
   def set_profile
