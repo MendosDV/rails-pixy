@@ -1,4 +1,5 @@
 .navbar-lewagon {
+  top: 0;
   justify-content: space-between;
   background: white;
 }
@@ -9,4 +10,18 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-lewagon .navbar-brand :hover {
+  opacity: 70%;
+  transform: scale(1.2);
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+.navbar-lewagon .avatar :hover {
+  opacity: 70%;
+  transform: scale(1.2);
+  transition: 0.8s;
+  cursor: pointer;
 }

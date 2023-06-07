@@ -5,11 +5,11 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 30px;
+  padding: 0;
   color: #224;
-  background:
-    url(https://source.unsplash.com/E8Ufcyxz514/2400x1823)
-    center / cover no-repeat fixed;
+  background-color: rgb(237, 101, 101);
+  height:100%;
+
 }
 
 .container {
@@ -20,3 +20,6 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+
+
+// background-image: linear-gradient(to right bottom, #bed4f5, #a0bffc, #89a9ff, #7c90ff, #7b74ff, #8a75fe, #9777fc, #a378fb, #b89bff, #cebdff, #e5deff, #ffffff);
