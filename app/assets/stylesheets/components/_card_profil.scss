@@ -1,11 +1,11 @@
 
 .card {
   --blur: 16px;
-  --size: clamp(300px, 50vmin, 600px);
+  --size: 200px;
   width: var(--size);
   aspect-ratio: 4 / 3;
   position: relative;
-  border-radius: 2rem;
+  border-radius: 24px;
   overflow: hidden;
   color: #000;
   transform: translateZ(0);
@@ -80,10 +80,10 @@
   color: white;
   padding: 0.5rem 1rem;
   border: none;
-  border-radius: 60%;
+  border-radius: 50%;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.4s, transform 0.4s;
 }
 
 .edit-button:hover {
@@ -92,7 +92,7 @@
 
 .edit-button:focus {
   outline: none;
-  box-shadow: 0 0 0 2px white, 0 0 0 4px #51c1b3;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #ffffff;
 }
 
 .edit-button:active {

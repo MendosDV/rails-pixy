@@ -1,37 +1,18 @@
-<% profiles.each do |profile| %>
-
-  <a href="#" class="card">
-    <%= image_tag("lou.jpeg", class:"card__img")%>
-    <span class="card__footer">
-      <span>Lou</span>
-      <span>High level</span>
-    </span>
-  <span class="card__action">
-    <button class="edit-button"><i class="fa-solid fa-pen" style="color: #0d0c0c;"></i></button>
-  </span>
-  </a>
+<% current_user.profiles.each do |profile| %>
+  <div class="card">
+    <% if profile.picture.attached? %>
+      <%= cl_image_tag(profile.picture.key, class: 'card__img') %>
+    <% else %>
+      <%= image_tag 'avatar_default.png', class: 'card__img' %>
+    <% end %>
+      <span class="card__footer">
+        <span><%= profile.nickname %></span>
+        <span><%= profile.category.name %></span>
+      </span>
+      <span class="card__action">
+        <%= link_to edit_profile_path(profile), class: "edit-button" do %>
+          <i class="fa-solid fa-pen" style="color: #0d0c0c;"></i>
+        <% end %>
+      </span>
   </div>
-  <div>
-  <a href="#" class="card">
-    <%= image_tag("Liam.jpeg", class:"card__img")%>
-    <span class="card__footer">
-      <span>Liam</span>
-      <span>Medium level</span>
-    </span>
-  <span class="card__action">
-    <button class="edit-button"><i class="fa-solid fa-pen" style="color: #0d0c0c;"></i></button>
-  </span>
-  </a>
-  </div>
-  <div>
-  <a href="#" class="card">
-    <%= image_tag("Lucia.jpeg", class:"card__img")%>
-    <span class="card__footer">
-      <span>Lucia</span>
-      <span>Low level</span>
-    </span>
-  <span class="card__action">
-    <button class="edit-button"><i class="fa-solid fa-pen" style="color: #0d0c0c;"></i></button>
-  </span>
-  </a>
-  </div>
+<% end %>
