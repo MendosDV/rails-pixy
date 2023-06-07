@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :profiles, dependent: :destroy
   has_one_attached :avatar
 
-  validates :first_name, :last_name, :email, :password, presence: true
+  validates :first_name, :last_name, presence: true
   validates :email, uniqueness: true
 end
