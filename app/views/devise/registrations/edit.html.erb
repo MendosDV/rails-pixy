@@ -43,9 +43,8 @@
           </div>
         <% end %>
 
-        <h3>Supprimer mon compte</h3>
 
-        <div>Vous n'êtes pas satisfait? <%= button_to "Supprimer", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+        <div>Vous n'êtes pas satisfait? <%= link_to "Supprimer", registration_path(resource_name), data: { confirm: "êtes-vous sûr?", turbo_confirm: "êtes-vous sûr" }, method: :delete %></div>
 
         <%= link_to "Retour", :back %>
     </div>
