@@ -8,7 +8,7 @@
         <%= image_tag 'avatar_default.png', class: 'card__img' %>
       <% end %>
         <span class="card__footer">
-          <span><%= profile.nickname %> - <%= (Date.today - profile.birth_date).to_i / 365 %>ans</span>
+          <span><%= profile.nickname %> - <%= (Date.today - profile.birth_date).to_i / 365 %> ans</span>
           <span><%= profile.category.name %></span>
         </span>
         <span class="card__action">

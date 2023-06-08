@@ -1,9 +1,8 @@
-$container-max-width: 1100px;
 
 body {
   font-family: 'nunito', sans-serif;
   background: rgb(255,255,255);
-  background: linear-gradient(351deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 26%, rgba(251,251,251,1) 44%, rgba(242,233,228,0.8932808073654391) 52%, rgba(201,173,167,0.714810552407932) 61%, rgba(154,140,152,0.8111278328611898) 76%, rgba(74,78,105,0.8337907223796034) 91%, rgba(34,34,59,0.7431391643059491) 100%);
+  background: linear-gradient(351deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 23%, rgba(251,251,251,1) 36%, rgba(242,233,228,0.8932808073654391) 47%, rgba(201,173,167,0.714810552407932) 57%, rgba(154,140,152,0.7969635269121813) 70%, rgba(74,78,105,0.8621193342776203) 84%, rgba(34,34,59,0.7573034702549575) 99%);
   align-items: center;
   justify-content: center;
   min-height: 100vh;
@@ -16,7 +15,6 @@ body {
 .container {
   margin-right: 50px;
   margin-left: 50px;
-  // max-width: $container-max-width;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
