@@ -5,4 +5,10 @@ Rails.application.routes.draw do
   resources :profiles do
     resources :visits, only: [:create]
   end
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      post '/process_dom', to: 'vulgarities#process_dom'
+    end
+  end
 end
