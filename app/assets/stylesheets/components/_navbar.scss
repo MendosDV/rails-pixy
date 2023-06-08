@@ -19,9 +19,22 @@
   cursor: pointer;
 }
 
+.navbar-lewagon .avatar {
+  object-fit: cover;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
 .navbar-lewagon .avatar :hover {
   opacity: 70%;
   transform: scale(1.2);
   transition: 0.8s;
   cursor: pointer;
 }
+
+// .navbar-lewagon .navbar-pixy {
+//   color: darkblue;
+//   font-size: 36px;
+// }

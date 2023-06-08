@@ -13,15 +13,16 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    @category = Category.find(params[:category_id])
+    @category = Category.find(params[:profile][:category_id])
     @profile = Profile.new(params_profile)
-    @profile.category = @category
     @profile.user = current_user
+    @profile.category = @category
 
     if @profile.save
       redirect_to profiles_path
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity, flash: { error: @profile.errors.full_messages }
+
     end
   end
 
@@ -41,7 +42,7 @@ class ProfilesController < ApplicationController
   private
 
   def params_profile
-    params.require(:profile).permit(:nickname, :birth_date, :picture)
+    params.require(:profile).permit(:nickname, :birth_date, :picture, :categoy_id)
   end
 
   def set_profile
