@@ -1,7 +1,10 @@
 .navbar-lewagon {
-  top: 0;
-  justify-content: space-between;
-  background: white;
+  position: relative;
+  margin: 0px auto;
+  background: rgba(44, 62, 80, 0.6);
+  padding: 16px 0px;
+  width: 100%;
+  z-index: 10;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,10 +13,11 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  opacity: 60%;
 }
 
 .navbar-lewagon .navbar-brand :hover {
-  opacity: 70%;
+  opacity: 40%;
   transform: scale(1.2);
   transition: 0.8s;
   cursor: pointer;
@@ -34,7 +38,6 @@
   cursor: pointer;
 }
 
-// .navbar-lewagon .navbar-pixy {
-//   color: darkblue;
-//   font-size: 36px;
-// }
+.nav-link {
+  color: #FFFFFF;
+}
