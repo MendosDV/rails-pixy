@@ -1,7 +1,7 @@
 <div class= 'container'>
   <div class= 'row'>
     <div class= 'column'>
-      <h2>Modifier ce profil</h2>
+      <h2>Ajouter un profil</h2>
         <%= simple_form_for @profile do |f| %>
         <%= f.error_notification %>
 
@@ -11,23 +11,23 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "nickname" }%>
-            <%= f.input :picture, as: :file,
-                label: "Photo de profil",
-                required: false,
-                input_html: { autocomplete: "picture" } %>
             <%= f.input :birth_date, :as => :date, label: 'Date de naissance',
                 start_year: Date.today.year,
                 end_year: Date.today.year - 12,
                 order: [:day, :month, :year] %>
+            <%= f.input :picture, as: :file,
+                label: "Photo de profil",
+                required: false,
+                input_html: { autocomplete: "picture" } %>
             <%= f.input :category_id, label: "Niveau de sécurité",
                 collection: Category.pluck(:name, :id) %>
           </div>
 
           <div class="form-actions">
-            <%= f.button :submit, "Mettre à jour" %>
+            <%= f.button :submit, "Enregistrer" %>
           </div>
         <% end %>
-        <%= link_to "Supprimer ce profil", profile_path(@profile), data: {turbo_method: :delete, turbo_confirm: 'Êtes-vous sûr?'} %>
+        <%= link_to "Supprimer ce profil", profiles_path %>
         <%= link_to "Retour", :back %>
 
     </div>
