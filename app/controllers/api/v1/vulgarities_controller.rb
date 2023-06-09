@@ -28,7 +28,7 @@ class Api::V1::VulgaritiesController < Api::V1::BaseController
 
     words.each do |word, hash|
       new_word = hash["replace"]
-      dom.gsub!(word, new_word)
+      dom.gsub!(word, "ef#{new_word}")
     end
     dom
   end
