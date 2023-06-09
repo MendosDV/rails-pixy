@@ -1,4 +1,5 @@
 require "nokogiri"
+require "json"
 
 class Api::V1::VulgaritiesController < Api::V1::BaseController
   respond_to :json
@@ -18,26 +19,17 @@ class Api::V1::VulgaritiesController < Api::V1::BaseController
 
   # Cette action stock notre hash dans vulgarities
   def replace_vulgarities(dom:)
-    hash = {
-      "connard" => {
-        replace: "personne désagréable",
-        language: "fr",
-        category: "Grossier",
-        description: "Cette expression ..."
-      },
-      "bordel à cul" => {
-        replace: "grand désordre",
-        language: "fr",
-        category: "Grossier",
-        description: "Cette expression désigne un grand désordre."
-      }
-    }
 
+    json_file = File.read(Rails.root.join('public', 'vulgarities.json'))
+    hash = JSON.parse(json_file)
     words = retrieve_words_from_dom(dom)
 
     words.each do |word|
       if hash[word.downcase]
-        dom.gsub!(word, hash[word.downcase][:replace])
+        all_words_finded = dom.scan(/.*#{word}.*/i)
+        all_words_finded.each do |word_finded|
+          dom.gsub!(word, "<pixy data-origin='#{word_finded}' class='blur'>#{hash[word.downcase]['replace']}</pixy>")
+        end
       end
     end
 
@@ -46,7 +38,7 @@ class Api::V1::VulgaritiesController < Api::V1::BaseController
     #   new_word = hash[:replace]
     #   dom.gsub!(word, new_word)
     # end
-    puts dom
+    ap dom
     dom
   end
 
