@@ -36,7 +36,9 @@ class Api::V1::VulgaritiesController < Api::V1::BaseController
     words = retrieve_words_from_dom(dom)
 
     words.each do |word|
-      dom.gsub!(word, hash[word.downcase][:replace]) if hash[word.downcase]
+      if hash[word.downcase]
+        dom.gsub!(word, hash[word.downcase][:replace])
+      end
     end
 
     # words.each do |word, hash|
@@ -50,12 +52,21 @@ class Api::V1::VulgaritiesController < Api::V1::BaseController
 
   def retrieve_words_from_dom(dom)
     doc = Nokogiri::HTML(dom)
-    words = []
+    array = []
 
     doc.traverse do |node|
-      words.concat(node.text.strip.split) if node.text?
+      if node.text?
+        sentence = node.text.strip
+        words = sentence.split
+        (0...words.length).each do |start_index|
+          (start_index...words.length).each do |end_index|
+            combination = words[start_index..end_index].join(" ")
+            array << combination
+          end
+        end
+      end
     end
 
-    words
+    array
   end
 end
