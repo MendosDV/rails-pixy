@@ -28,7 +28,7 @@ class Api::V1::VulgaritiesController < Api::V1::BaseController
       if hash[word.downcase]
         all_words_finded = dom.scan(/.*#{word}.*/i)
         all_words_finded.each do |word_finded|
-          dom.gsub!(word, "<pixy data-origin='#{word_finded}' class='blur'>#{hash[word.downcase]['replace']}</pixy>")
+          dom.gsub!(word, "<pixy class='blur'>#{hash[word.downcase]['replace']}</pixy>")
         end
       end
     end
