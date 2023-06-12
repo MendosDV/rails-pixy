@@ -4,8 +4,7 @@
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 50px;
   grid-row-gap: 20px;
-  // padding: 20px;
-  margin-top: 80px;
+  margin-top: 16px;
   width: 100%;
   height: 100%;
   }
@@ -38,22 +37,34 @@
   .div-title {
     margin-top: 6px;
     margin-left: 6px;
-    font-size: small;
-    align-items: left;
+    font-size: smaller;
+    text-align: left;
     font-style: italic;
     opacity: 80%;
+    color: rgb(37, 32, 126);
   }
+
   .div-content {
     display: flex;
     margin-top: 8px;
     margin-bottom: 50px;
     justify-content: center;
-
   }
 
   .div-subcontent {
     display: flex;
     justify-content: center;
-    // border: red 1px solid;
-    text-align: center;
+    text-align: left;
+    margin: 8px;
+    padding: 8px;
+    font-size: small;
+
+  }
+
+  #link-url {
+    text-decoration: none;
+    font-family: 'nunito', sans-serif;
+    color: black;
+    font-size: small;
+    text-align: left;
   }

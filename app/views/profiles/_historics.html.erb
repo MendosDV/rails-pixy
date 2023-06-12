@@ -1,0 +1,17 @@
+
+<ul>
+  <% @visits.first(15).each do |visit| %>
+    <li>
+      <a href="<%= visit.url %>">
+      <span id="link-url"> site:<%= visit.url %></span>
+      ---
+      </a>
+      <span> Total de mots modifiés: <%= visit.words_changed %></span>
+       ---
+      <span> le : <%= visit.date.strftime("%d/%m/%Y à %H:%M") %></span>
+    </li>
+  <% end %>
+</ul>
+
+
+  <%# <span> il y a <%= (Date.today - visit.date).to_i </span> %>

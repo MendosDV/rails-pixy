@@ -4,6 +4,13 @@ class ProfilesController < ApplicationController
   def index
     @profiles = current_user.profiles
     @visits = current_user.visits
+
+    @today_visits = Visit.where(date: Date.today)
+    @last_seven_days_visits = Visit.where(date: (Date.today - 7.days)..Date.today)
+
+    @total_words_changed = @today_visits.sum(&:words_changed)
+    #@total_words_changed_last_seven_days = @last_seven_days_visits.sum(&:words_changed)
+    #@total_words_changed_percentage = (@total_words_changed / @total_words_changed_last_seven_days) * 100
   end
 
   def show
@@ -23,8 +30,8 @@ class ProfilesController < ApplicationController
       redirect_to profiles_path
     else
       render :new, status: :unprocessable_entity, flash: { error: @profile.errors.full_messages }
-
     end
+
   end
 
   def edit
@@ -39,6 +46,7 @@ class ProfilesController < ApplicationController
     @profile.destroy
     redirect_to profiles_path, notice: "Votre profil a bien été supprimé"
   end
+
 
   private
 

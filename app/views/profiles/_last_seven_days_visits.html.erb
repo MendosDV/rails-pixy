@@ -1,0 +1,7 @@
+
+ <% seven_days_visits = @visits.select { |visit| visit.date >= Date.today - 7.days } %>
+  <% if seven_days_visits.empty? %>
+    <p>Aucune visite au cours des 7 derniers jours.</p>
+  <% else %>
+    <p>Total de mots modifiés: <%= @total_words_changed_last_seven_days %></p>
+    <% end %>
