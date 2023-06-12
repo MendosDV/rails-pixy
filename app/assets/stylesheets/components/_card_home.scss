@@ -1,0 +1,143 @@
+// .card-container {
+//   // display: flex;
+//   // justify-content: center;
+//   // border-bottom: solid grey;
+//   // border-width: 1px;
+//   // background-color: rgb(248, 244, 244);
+//   // background: rgb(255, 255, 255);
+//   // background: linear-gradient(351deg, rgba(34, 34, 59, 0.757) 0%, rgba(74, 78, 105, 0.862) 16%, rgba(154, 140, 152, 0.797) 30%, rgba(201, 173, 167, 0.715) 43%, rgba(242, 233, 228, 0.893) 53%, rgba(251, 251, 251, 1) 64%, rgba(255, 255, 255, 1) 77%, rgba(255, 255, 255, 1) 100%);
+//   // display: grid;
+//   // grid-template-columns: repeat(2, 1fr);
+//   // gap: 20px;
+
+// }
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100px; /* Remplacez "100px" par la hauteur de votre carte */
+}
+
+.card-paragraph {
+  margin-top: 5px;
+  font-size: 10px;
+  text-align: center;
+}
+
+
+
+
+// FORMAT DES CARDS LEVEL
+
+.card-low .fa-traffic-light,
+.card-medium .fa-traffic-light,
+.card-high .fa-traffic-light {
+  font-size: 2rem;
+}
+
+.card-low h5,
+.card-medium h5,
+.card-high h5 {
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+// .card-low p,
+// .card-medium p,
+// .card-high p {
+//   margin-top: 10px;
+//   font-size: 12px;
+// }
+
+// couleur des cards de level :
+.card-low {
+  background-color: #eaf6eb; /* Couleur légèrement verte pour sécurité faible */
+  width: 120px;
+  padding: 20px;
+  margin: 32px;
+  box-sizing: border-box;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 4px;
+  grid-column: 1;
+  grid-row: 1 / 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-medium {
+  background-color: #ffe8d9; /* Couleur légèrement orangée pour sécurité modérée */
+  width: 120px;
+  padding: 20px;
+  margin: 32px;
+  box-sizing: border-box;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 8px;
+  grid-column: 1;
+  grid-row: 3 / 4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-high {
+  background-color: #fcdcdc; /* Couleur légèrement rouge pour sécurité élevée */
+  width: 120px;
+  padding: 20px;
+  margin: 32px;
+  box-sizing: border-box;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 8px;
+  grid-column: 2;
+  grid-row: 2 / 3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+
+// .card-low,
+// .card-medium,
+// .card-high {
+//   /* Vos styles existants */
+//   /* ... */
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+//   transition: box-shadow 0.3s ease;
+// }
+
+.card-low:hover,
+.card-medium:hover,
+.card-high:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+// hover de brillance
+
+.card-low,
+.card-medium,
+.card-high {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-low:before,
+.card-medium:before,
+.card-high:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: scaleX(1);
+  transform-origin: left top;
+  transition: transform 0.5s;
+}
+
+.card-low:hover:before,
+.card-medium:hover:before,
+.card-high:hover:before {
+  transform: scaleX(0);
+}

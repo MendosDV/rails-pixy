@@ -8,9 +8,10 @@
   height: 80px;
   padding: 0px 40px;
   color: rgba(0,0,0,0.4);
-  position: fixed;
+  // position: fixed;
   bottom:0;  /* on le colle en bas */
   width:100%;
+  position: sticky;
 }
 
 .footer-links {
