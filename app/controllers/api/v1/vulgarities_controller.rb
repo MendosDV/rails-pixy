@@ -8,10 +8,10 @@ module Api
       # Cette action récupère dans les params le body/ text, applique replace_vulgarities dessus et renvoie le JSON
       def process_dom
         dom = params[:dom]
-        visited_urls = params[:visitedSites]
-        visited_urls.each do |hash|
-          Visit.create!(url: hash[:url], date: DateTime.current, profile_id: Profile.last.id)
-        end
+        # visited_urls = params[:visitedSites]
+        # visited_urls.each do |hash|
+        #   Visit.create!(url: hash[:url], date: DateTime.current, profile_id: Profile.last.id)
+        # end
         unless dom
           return render json: { error: "Une erreur s'est produite lors du traitement du DOM." }, status: :unprocessable_entity
         end
@@ -34,19 +34,19 @@ module Api
           case category.name
           when "Faible"
             dom.gsub!(/#{key}/i,
-              "<pixy data-word='#{key}' data-description='#{value['description']}'>
+              "<pixy data-word='#{key}' data-level='low' data-description='#{value['description']}'>
                #{key}
               </pixy>"
             )
           when "Modéré"
             dom.gsub!(/#{key}/i,
-              "<pixy data-word='#{key}' data-description='#{value['description']}'>
+              "<pixy data-word='#{key}' data-level='medium' data-description='#{value['description']}'>
                #{value['replace']}
               </pixy>"
             )
           when "Elevé"
             dom.gsub!(/#{key}/i,
-              "<pixy>
+              "<pixy data-level='high' >
                #{value['replace']}
               </pixy>"
             )
