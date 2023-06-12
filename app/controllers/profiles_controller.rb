@@ -2,7 +2,8 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: %i[show edit update destroy]
 
   def index
-    @profiles = Profile.all
+    @profiles = current_user.profiles
+    @visits = current_user.visits
   end
 
   def show

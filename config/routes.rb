@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :profiles do
-    resources :visits, only: [:create]
+    resources :visits, only: [:index, :show]
   end
 
   namespace :api, defaults: { format: :json } do

@@ -1,0 +1,7 @@
+
+ <% @visits.each do |visit| %>
+  <%= visit.url %> | <%= visit.words_changed %> | <%= visit.date %>
+  <%= visit.profile_id %>
+<% end %>
+
+  <%# <span> il y a <%= (Date.today - visit.date).to_i </span> %>
