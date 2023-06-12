@@ -1,0 +1,10 @@
+
+
+    <% today_visits = @visits.select { |visit| visit.date == Date.today } %>
+    <% if today_visits.empty? %>
+      <p>Aucune visite aujourd'hui.</p>
+    <% else %>
+      <% today_visits.each do |visit| %>
+      <p>Total de mots modifiés: <%= @total_words_changed %></p>
+      <% end %>
+    <% end %>
