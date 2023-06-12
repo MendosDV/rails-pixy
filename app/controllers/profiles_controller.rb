@@ -5,6 +5,17 @@ class ProfilesController < ApplicationController
     @profiles = Profile.all
   end
 
+  def change_category
+    @profile = Profile.find(params[:id])
+    @category = Category.find(params[:category_id])
+
+    if @profile.update(category: @category)
+      render json: { success: true }
+    else
+      render json: { success: false, error: 'Failed to update category' }
+    end
+  end
+
   def show
   end
 

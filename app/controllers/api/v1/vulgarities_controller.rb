@@ -30,17 +30,11 @@ module Api
       if hash[word.downcase]
         all_words_finded = dom.scan(/.*#{word}.*/i)
         all_words_finded.each do |word_finded|
-          dom.gsub!(word, "<pixy class='blur'>#{hash[word.downcase]['replace']}</pixy>")
+          dom.gsub!(word, "<pixy class='red'>#{hash[word.downcase]['replace']}</pixy>")
         end
       end
     end
 
-    # words.each do |word, hash|
-    #   word = word.downcase
-    #   new_word = hash[:replace]
-    #   dom.gsub!(word, new_word)
-    # end
-    ap dom
     dom
   end
 
