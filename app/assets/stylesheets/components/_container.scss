@@ -1,22 +1,72 @@
-
-body {
-  font-family: 'nunito', sans-serif;
-  background: rgb(255,255,255);
-  background: linear-gradient(351deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 23%, rgba(251,251,251,1) 36%, rgba(242,233,228,0.8932808073654391) 47%, rgba(201,173,167,0.714810552407932) 57%, rgba(154,140,152,0.7969635269121813) 70%, rgba(74,78,105,0.8621193342776203) 84%, rgba(34,34,59,0.7573034702549575) 99%);
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 0;
-  color: #224;
-  height:100%;
-
+// code de yo :
+.container2 {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(245, 248, 252);
+    text-align: center;
+    font-family: 'Cherry Cream Soda', cursive;
 }
 
-.container {
-  margin-right: 50px;
-  margin-left: 50px;
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  padding-bottom: 100px;
+// PARAGRAPHE ET CARD LEVEL
+
+.container3{
+  display: flex;
 }
+.container4 {
+    display: flex;
+  }
+
+
+
+.card-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(240, 240, 240);
+  // border: solid red;
+  flex-basis: 50%;
+}
+
+  .image {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+    // border: solid red;
+    flex-basis: 50%;
+  }
+
+  .image img {
+    width: 75%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+
+
+
+
+
+
+// code de Elise :
+// body {
+//   font-family: 'nunito', sans-serif;
+//   background: rgb(255,255,255);
+//   background: linear-gradient(351deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 23%, rgba(251,251,251,1) 36%, rgba(242,233,228,0.8932808073654391) 47%, rgba(201,173,167,0.714810552407932) 57%, rgba(154,140,152,0.7969635269121813) 70%, rgba(74,78,105,0.8621193342776203) 84%, rgba(34,34,59,0.7573034702549575) 99%);
+//   align-items: center;
+//   justify-content: center;
+//   min-height: 100vh;
+//   padding: 0;
+//   color: #224;
+//   height:100%;
+
+// }
+
+// .container {
+//   margin: 0;
+//   padding: 20px;
+//   width: 100%;
+//   box-sizing: border-box;
+//   padding-bottom: 100px;
+// }

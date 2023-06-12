@@ -1,0 +1,60 @@
+// .carousel {
+//   z-index: 9999; /* Valeur élevée pour mettre le h2 au premier plan */
+//   // display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 150px;
+//   border-radius: 8px;
+//   border: solid red;
+// }
+
+// .carousel img {
+//   border-radius: 12px;
+//   border: solid red;
+// }
+
+// .carousel {
+//   position: relative;
+//   width: 400px;
+//   height: 300px;
+//   overflow: hidden;
+//   margin: 150px;
+// }
+
+// .carousel-slides {
+//   display: flex;
+//   width: 200%;
+//   transition: transform 0.5s ease-in-out;
+// }
+
+// .carousel-slides img {
+//   width: 50%;
+//   height: auto;
+//   object-fit: cover;
+// }
+
+// .carousel-navigation {
+//   position: absolute;
+//   bottom: 10px;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }
+
+// .carousel-dots {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .dot {
+//   width: 10px;
+//   height: 10px;
+//   background-color: #ccc;
+//   border-radius: 50%;
+//   margin: 0 5px;
+//   cursor: pointer;
+// }
+
+// .dot.active {
+//   background-color: #666;
+// }
