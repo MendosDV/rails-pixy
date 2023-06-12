@@ -6,7 +6,11 @@
     box-sizing: border-box;
     background-color: rgb(245, 246, 249);
     text-align: center;
+<<<<<<< HEAD
     font-family: 'nunito', sans-serif;
+=======
+    font-family: "nunito", sans-serif;
+>>>>>>> 6b7ff1ac22d30062860ac71606359bfac1813de8
     padding-bottom: 100px;
 }
 
@@ -16,6 +20,7 @@
   display: flex;
   height: 400px;
 }
+
 .container4 {
     display: flex;
     height: 400px;
@@ -45,7 +50,7 @@
   }
 
   .image img {
-    height: 750;
+    height: 50%;
     width: 75%;
     border-radius: 4px;
     // margin-top: 24px;
@@ -70,4 +75,7 @@
 //   height:100%;
 
 // }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6b7ff1ac22d30062860ac71606359bfac1813de8
