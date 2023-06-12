@@ -50,12 +50,17 @@
 
   </head>
   <body>
-      <%= render "shared/navbar" %>
-      <%= yield %>
-    <%# </div> %>
-      <%= render "shared/footer"%>
-      <%= render "shared/flashes" %>
-    <%# <div class="container"> %>
-    </div>
+
+    <%= render "shared/navbar" %>
+
+      <%# <div class="container"> %>
+
+        <%= render "shared/flashes" %>
+        <%= yield %>
+
+      <%# </div> %>
+
+    <%= render "shared/footer"%>
+
   </body>
 </html>
