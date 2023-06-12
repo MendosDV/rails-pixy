@@ -1,6 +1,6 @@
 
 <ul>
-  <% @visits.each do |visit| %>
+  <% @visits.first(10).each do |visit| %>
     <li>
    <span> site:<%= visit.url %></span> |
    <span><%= visit.words_changed %> mots modifiés</span> |

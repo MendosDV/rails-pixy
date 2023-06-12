@@ -17,7 +17,7 @@
                 input_html: { autocomplete: "picture" } %>
             <%= f.input :birth_date, :as => :date, label: 'Date de naissance',
                 start_year: Date.today.year,
-                end_year: Date.today.year - 12,
+                end_year: Date.today.year - 18,
                 order: [:day, :month, :year] %>
             <%= f.input :category_id, label: "Niveau de sécurité",
                 collection: Category.pluck(:name, :id) %>
