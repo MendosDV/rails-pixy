@@ -11,6 +11,7 @@ module Api
         visited_urls = params[:visitedSites]
         visited_urls.each do |hash|
           Visit.create!(url: hash[:url], date: DateTime.current, profile_id: Profile.last.id)
+          #remplacer le Profile.last.id par le profile_id du profile
         end
         unless dom
           return render json: { error: "Une erreur s'est produite lors du traitement du DOM." }, status: :unprocessable_entity
