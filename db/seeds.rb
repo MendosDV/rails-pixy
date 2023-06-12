@@ -33,7 +33,6 @@ puts "creation de profiles"
 Tommy.profiles.create!(nickname: "Liam", birth_date: "2012-01-01", category: Category.all.sample)
 Boby.profiles.create!(nickname: "Lou", birth_date: "2016-01-01", category: Category.all.sample)
 
-
 file_lucia = URI.open("https://res.cloudinary.com/dmgpqeugv/image/upload/v1686232473/development/pixy/lucia_gsaugx.jpg")
 lucia = Profile.new(
   nickname: 'Lucia',

@@ -1,0 +1,104 @@
+{
+  "connard": {
+    "replace": "personne désagréable",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Cette expression ..."
+  },
+  "branle": {
+    "replace": "agite",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Cette expression désigne une agitation."
+  },
+  "putain": {
+    "replace": "diantre",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'diantre' pour exprimer l'étonnement ou la frustration de manière moins offensante."
+  },
+  "teub": {
+    "replace": "pénis",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire désigne un pénis."
+  },
+  "pisser": {
+    "replace": "uriner",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'uriner' pour décrire l'action d'uriner."
+  },
+  "branlette": {
+    "replace": "erreur de jugement",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire peut être remplacé par 'erreur de jugement' pour désigner un dérapage ou une action inappropriée."
+  },
+  "branlé": {
+    "replace": "perturbé",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'perturbé' pour décrire quelqu'un de déséquilibré ou dérangé."
+  },
+  "jouir": {
+    "replace": "profiter pleinement",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme peut être remplacé par 'profiter pleinement' pour exprimer le fait de profiter pleinement d'une situation ou d'un plaisir."
+  },
+  "joui": {
+    "replace": "profité",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme peut être remplacé par 'profité' pour exprimer le fait de profité d'une situation ou d'un plaisir."
+  },
+  "zizi": {
+    "replace": "organe sexuel",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire peut être remplacé par 'organe sexuel' pour désigner l'organe sexuel masculin."
+  },
+  "levrette": {
+    "replace": "position arrière",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire peut être remplacé par 'position arrière' pour désigner une position sexuelle spécifique."
+  },
+  "calbard": {
+    "replace": "caleçon",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'caleçon' pour désigner un caleçon large ou ample."
+  },
+  "calbute": {
+    "replace": "caleçon",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'caleçon' pour désigner un caleçon large ou ample."
+  },
+  "encule": {
+    "replace": "nuire",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'nuire' pour exprimer l'action de causer du tort ou de détruire quelque chose."
+  },
+  "ejaculé": {
+    "replace": "expulsé",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire peut être remplacé par 'expulsé' pour décrire le fait d'éjecter quelque chose."
+  },
+  "éjaculé": {
+    "replace": "expulsé",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire peut être remplacé par 'expulsé' pour décrire le fait d'éjecter quelque chose."
+  },
+  "salope": {
+    "replace": "rebelle",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire peut être remplacé par 'rebelle' pour décrire le fait d'éjecter quelque chose."
+  }
+}
