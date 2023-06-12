@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: [:google_oauth2]
 
   has_many :profiles, dependent: :destroy
+  has_many :visits, through: :profiles
   has_one_attached :avatar
 
   validates :first_name, :last_name, presence: true
