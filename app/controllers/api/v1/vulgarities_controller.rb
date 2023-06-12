@@ -21,14 +21,32 @@ module Api
 
       # Cette action stock notre hash dans vulgarities
       def replace_vulgarities(dom:)
+        category = Category.find(current_user.current_category_id)
+        puts category.name
 
         json_file = File.read(Rails.root.join('public', 'vulgarities.json'))
         hash = JSON.parse(json_file)
         hash.each do |key, value|
-          dom.gsub!(/#{key}/i, "<pixy data-word='#{key}' data-description='#{value['description']}'>
-            #{value['replace']}
-        </pixy>")
-
+          case category.name
+          when "Faible"
+            dom.gsub!(/#{key}/i,
+              "<pixy data-word='#{key}' data-description='#{value['description']}'>
+               #{key}
+              </pixy>"
+            )
+          when "Modéré"
+            dom.gsub!(/#{key}/i,
+              "<pixy data-word='#{key}' data-description='#{value['description']}'>
+               #{value['replace']}
+              </pixy>"
+            )
+          when "Elevé"
+            dom.gsub!(/#{key}/i,
+              "<pixy>
+               #{value['replace']}
+              </pixy>"
+            )
+          end
         end
         dom += "<pixy-explication style='position: absolute; display: none;> </pixy-explication>"
         dom
