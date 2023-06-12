@@ -19,49 +19,19 @@ module Api
 
       private
 
-  # Cette action stock notre hash dans vulgarities
-  def replace_vulgarities(dom:)
+      # Cette action stock notre hash dans vulgarities
+      def replace_vulgarities(dom:)
 
-    json_file = File.read(Rails.root.join('public', 'vulgarities.json'))
-    hash = JSON.parse(json_file)
-    words = retrieve_words_from_dom(dom)
+        json_file = File.read(Rails.root.join('public', 'vulgarities.json'))
+        hash = JSON.parse(json_file)
+        hash.each do |key, value|
+          dom.gsub!(/#{key}/i, "<pixy data-word='#{key}' data-description='#{value['description']}'>
+            #{value['replace']}
+        </pixy>")
 
-    words.each do |word|
-      if hash[word.downcase]
-        all_words_finded = dom.scan(/.*#{word}.*/i)
-        all_words_finded.each do |word_finded|
-          dom.gsub!(word, "<pixy class='blur'>#{hash[word.downcase]['replace']}</pixy>")
         end
-      end
-    end
-
-    # words.each do |word, hash|
-    #   word = word.downcase
-    #   new_word = hash[:replace]
-    #   dom.gsub!(word, new_word)
-    # end
-    ap dom
-    dom
-  end
-
-      def retrieve_words_from_dom(dom)
-        doc = Nokogiri::HTML(dom)
-        array = []
-
-        doc.traverse do |node|
-          if node.text?
-            sentence = node.text.strip
-            words = sentence.split
-            (0...words.length).each do |start_index|
-              (start_index...words.length).each do |end_index|
-                combination = words[start_index..end_index].join(" ")
-                array << combination
-              end
-            end
-          end
-        end
-
-        array
+        dom += "<pixy-explication style='position: absolute; display: none;> </pixy-explication>"
+        dom
       end
     end
   end
