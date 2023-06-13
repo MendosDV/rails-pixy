@@ -30,16 +30,25 @@ module Api
 
         json_file = File.read(Rails.root.join('public', 'vulgarities.json'))
         hash = JSON.parse(json_file)
+        count = 0
         hash.each do |key, value|
+          
           case category.name
+
           when "Faible"
-            dom.gsub!(/#{key}/i, "<pixy data-word='#{key}'
+            dom.gsub!(/#{key}/i) do |match|
+            count += 1
+           "<pixy data-word='#{key}'
                                   data-level='low'
                                   data-description='#{value['description']}'>
                                     #{key}
-                                  </pixy>")
+                                  </pixy>"
+                                  end
+
           when "Modéré"
-            dom.gsub!(/#{key}/i, "<pixy data-word='#{key}'
+            dom.gsub!(/#{key}/i) do |match|
+            count += 1
+            "<pixy data-word='#{key}'
                                   data-level='medium'
                                   data-description='#{value['description']}'>
                                     #{value['replace']}
@@ -47,17 +56,24 @@ module Api
                                       <pixy-word>#{key}</pixy-word>
                                       <pixy-description>#{value['description']}</pixy-description>
                                     </pixy-explication>
-                                  </pixy>")
+                                  </pixy>"
+                                end
+
           when "Elevé"
-            dom.gsub!(/#{key}/i, "<pixy data-level='high' >
+            dom.gsub!(/#{key}/i) do |match|
+            count += 1
+           "<pixy data-level='high' >
                                     #{value['replace']}
                                     <pixy-explication style='position: absolute; display: none;'>
                                       <pixy-word>#{key}</pixy-word>
                                       <pixy-description>#{value['description']}</pixy-description>
                                     </pixy-explication>
-                                  </pixy>")
+                                  </pixy>"
+                                end
           end
         end
+
+        puts "count: #{count}"
         dom
       end
     end
