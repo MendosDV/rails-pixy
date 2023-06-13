@@ -1,6 +1,5 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: %i[show edit update destroy]
-  before_action :set_words_changed
 
   def index
     @profiles = current_user.profiles
@@ -59,9 +58,4 @@ class ProfilesController < ApplicationController
   def set_profile
     @profile = Profile.find(params[:id])
   end
-
-  def set_words_changed
-    @words_changed = Api::V1::VulgaritiesController.new.words_changed
-  end
-
 end
