@@ -18,7 +18,13 @@ module Api
       end
 
       def change_category
-        current_user.update(current_category_id: params[:category_id])
+        puts params[:profile_id]
+        current_profile = Profile.find(params[:profile_id])
+        current_user.profiles.each do |profile|
+          profile.update(selected: false)
+        end
+        current_profile.update(selected: true)
+        current_user.update(current_category_id: current_profile.category_id)
         render json: { content: "ok" }
         head :ok
       end
