@@ -72,7 +72,6 @@ module Api
                                 end
           end
         end
-
         puts "count: #{count}"
         dom
       end
