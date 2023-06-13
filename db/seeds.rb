@@ -70,12 +70,6 @@ Visit.create(
   date: DateTime.now
 )
 
-Visit.create(
-  profile_id: lucia.id,
-  url: 'https://www.jeuxvideo.com/forums/42-51-72478382-1-0-1-0-les-anecdotes-sexuels-me-paraissent-surrealiste.htm',
-  words_changed: 13,
-  date: DateTime.now
-)
 
 
 Visit.create(
