@@ -1,9 +1,9 @@
 
 <ul>
-  <% @visits.first(15).each do |visit| %>
+  <% @visits.last(15).reverse.each do |visit| %>
     <li>
-      <a href="<%= visit.url %>">
-      <span id="link-url"> site:<%= visit.url %></span>
+      <a href="<%= visit.url %>" target="_blank" class="link-url">
+      <span> site: <%= visit.title %></span>
       ---
       </a>
       <span> Total de mots modifiés: <%= visit.words_changed %></span>
