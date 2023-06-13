@@ -65,22 +65,7 @@ puts "creation de visits"
 
 Visit.create(
   profile_id: lucia.id,
-  url: 'https://www.jeuxvideo.com/forums/42-51-71450961-2-0-1-0-putain-je-me-branle-rarement-mais-quand-je-le-fais.htm',
-  words_changed: 27,
-  date: DateTime.now
-)
-
-
-
-Visit.create(
-  profile_id: lilia.id,
-  url: 'https://www.jeuxvideo.com/forums/42-51-71450961-2-0-1-0-putain-je-me-branle-rarement-mais-quand-je-le-fais.htm',
-  words_changed: 27,
-  date: DateTime.now
-)
-
-Visit.create(
-  profile_id: bianca.id,
+  title: "jeux video.com",
   url: 'https://www.jeuxvideo.com/forums/42-51-71450961-2-0-1-0-putain-je-me-branle-rarement-mais-quand-je-le-fais.htm',
   words_changed: 27,
   date: DateTime.now
