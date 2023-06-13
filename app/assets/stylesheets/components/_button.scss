@@ -24,15 +24,17 @@
   overflow: hidden;
   border-radius: 40px;
 }
-
-a span {
-  position: relative;
-  color: #fff;
-  font-size: 20px;
-  font-family: 'nunito', sans-serif;
-  letter-spacing: 8px;
-  z-index: 1;
+a {
+  text-decoration: none;
 }
+// a span {
+//   position: relative;
+//   color: black;
+//   font-size: 20px;
+//   font-family: 'nunito', sans-serif;
+//   letter-spacing: 8px;
+//   z-index: 1;
+// }
 
 a .liquid {
   position: absolute;
