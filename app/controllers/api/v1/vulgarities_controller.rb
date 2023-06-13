@@ -33,26 +33,32 @@ module Api
         hash.each do |key, value|
           case category.name
           when "Faible"
-            dom.gsub!(/#{key}/i,
-              "<pixy data-word='#{key}' data-level='low' data-description='#{value['description']}'>
-               #{key}
-              </pixy>"
-            )
+            dom.gsub!(/#{key}/i, "<pixy data-word='#{key}'
+                                  data-level='low'
+                                  data-description='#{value['description']}'>
+                                    #{key}
+                                  </pixy>")
           when "Modéré"
-            dom.gsub!(/#{key}/i,
-              "<pixy data-word='#{key}' data-level='medium' data-description='#{value['description']}'>
-               #{value['replace']}
-              </pixy>"
-            )
+            dom.gsub!(/#{key}/i, "<pixy data-word='#{key}'
+                                  data-level='medium'
+                                  data-description='#{value['description']}'>
+                                    #{value['replace']}
+                                    <pixy-explication style='position: absolute; display: none;'>
+                                      <pixy-word>#{key}</pixy-word>
+                                      <pixy-description>#{value['description']}</pixy-description>
+                                    </pixy-explication>
+                                  </pixy>")
           when "Elevé"
-            dom.gsub!(/#{key}/i,
-              "<pixy data-level='high' >
-               #{value['replace']}
-              </pixy>"
-            )
+            dom.gsub!(/#{key}/i, "<pixy data-level='high' >
+                                    #{value['replace']}
+                                    <pixy-explication style='position: absolute; display: none;'>
+                                      <pixy-word>#{key}</pixy-word>
+                                      <pixy-description>#{value['description']}</pixy-description>
+                                    </pixy-explication>
+                                  </pixy>")
           end
         end
-        dom += "<pixy-explication style='position: absolute; display: none;> </pixy-explication>"
+        # dom += "<pixy-explication style='position: absolute; display: none;'> </pixy-explication>"
         dom
       end
     end
