@@ -17,7 +17,7 @@ module Api
         end
 
         @replaced_text = replace_vulgarities(dom: dom)
-
+        puts "je suis la"
         render json: { modifiedDOM: @replaced_text }
       end
 
@@ -25,12 +25,14 @@ module Api
 
       # Cette action stock notre hash dans vulgarities
       def replace_vulgarities(dom:)
-        category = Category.find(current_user.current_category_id)
-        puts category.name
 
+
+        # category = Category.find(current_user.current_category_id)
+        category = Category.first
         json_file = File.read(Rails.root.join('public', 'vulgarities.json'))
         hash = JSON.parse(json_file)
         count = 0
+
         hash.each do |key, value|
           
           case category.name
@@ -74,6 +76,7 @@ module Api
         end
         puts "count: #{count}"
         dom
+
       end
     end
   end
