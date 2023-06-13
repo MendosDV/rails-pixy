@@ -27,16 +27,17 @@
 a {
   text-decoration: none;
 }
-// a span {
-//   position: relative;
-//   color: black;
-//   font-size: 20px;
-//   font-family: 'nunito', sans-serif;
-//   letter-spacing: 8px;
-//   z-index: 1;
-// }
 
-a .liquid {
+.span-pixy {
+  position: relative;
+  color: white;
+  font-size: 20px;
+  font-family: 'nunito', sans-serif;
+  letter-spacing: 8px;
+  z-index: 1;
+}
+
+.liquid {
   position: absolute;
   top: -80px;
   left: 0;
@@ -47,8 +48,8 @@ a .liquid {
   transition: .5s;
 }
 
-a .liquid::after,
-a .liquid::before {
+.liquid::after,
+.liquid::before {
   content: '';
   width: 200%;
   height: 200%;
@@ -59,7 +60,7 @@ a .liquid::before {
   background: #000;
 }
 
-a .liquid::before {
+.liquid::before {
 
   border-radius: 45%;
   background: rgba(20, 20, 20, 1);
@@ -73,7 +74,7 @@ a .liquid::after {
   animation: animate 30s linear infinite;
 }
 
-a:hover .liquid{
+.liquid:hover{
   top: -120px;
 }
 
