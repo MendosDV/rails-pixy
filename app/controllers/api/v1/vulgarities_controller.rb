@@ -33,44 +33,49 @@ module Api
         hash = JSON.parse(json_file)
         count = 0
 
-        puts "______________________________________"
-        puts category.name
-        puts "______________________________________"
         hash.each do |key, value|
+          
           case category.name
-          when "Faible"
-            dom.gsub!(/#{key}/i) do |a|
-              count += 1; "<pixy data-word='#{key}' data-level='low' data-description='#{value['description']}'>#{key}</pixy>"
-            end
 
+          when "Faible"
+            dom.gsub!(/#{key}/i) do |match|
+            count += 1
+           "<pixy data-word='#{key}'
+                                  data-level='low'
+                                  data-description='#{value['description']}'>
+                                    #{key}
+                                  </pixy>"
+                                  end
 
           when "Modéré"
-            dom.gsub!(/#{key}/i) do |a|
-              count += 1; "<pixy data-word='#{key}' data-level='medium' data-description='#{value['description']}'>
-              #{value['replace']}
-              <pixy-explication style='position: absolute; display: none;'>
-              <pixy-word>#{key}</pixy-word>
-              <pixy-description>#{value['description']}</pixy-description>
-              </pixy-explication>
-              </pixy>"
-            end
+            dom.gsub!(/#{key}/i) do |match|
+            count += 1
+            "<pixy data-word='#{key}'
+                                  data-level='medium'
+                                  data-description='#{value['description']}'>
+                                    #{value['replace']}
+                                    <pixy-explication style='position: absolute; display: none;'>
+                                      <pixy-word>#{key}</pixy-word>
+                                      <pixy-description>#{value['description']}</pixy-description>
+                                    </pixy-explication>
+                                  </pixy>"
+                                end
 
           when "Elevé"
-
-            dom.gsub!(/#{key}/i) do |a|
-              count += 1; "<pixy data-level='high'>
-                #{value['replace']}
-                <pixy-explication style='position: absolute; display: none;'>
-                  <pixy-word>#{key}</pixy-word>
-                  <pixy-description>#{value['description']}</pixy-description>
-                </pixy-explication>
-              </pixy>"
-            end
-          else
-            puts "PIXYYYYYYYYYYYYYY"
+            dom.gsub!(/#{key}/i) do |match|
+            count += 1
+           "<pixy data-level='high' >
+                                    #{value['replace']}
+                                    <pixy-explication style='position: absolute; display: none;'>
+                                      <pixy-word>#{key}</pixy-word>
+                                      <pixy-description>#{value['description']}</pixy-description>
+                                    </pixy-explication>
+                                  </pixy>"
+                                end
           end
         end
-        puts "Nombre de mots changés : #{count}"
+        puts "count: #{count}"
+        dom
 
       end
     end
