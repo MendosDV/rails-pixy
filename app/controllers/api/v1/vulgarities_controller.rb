@@ -34,11 +34,10 @@ module Api
         count = 0
 
         hash.each do |key, value|
-          
           case category.name
 
           when "Faible"
-            dom.gsub!(/#{key}/i) do |match|
+            dom.gsub!(/(#{key})(?!([^<]+)?>)/i) do |match|
             count += 1
            "<pixy data-word='#{key}'
                                   data-level='low'
@@ -48,7 +47,7 @@ module Api
                                   end
 
           when "Modéré"
-            dom.gsub!(/#{key}/i) do |match|
+            dom.gsub!(/(#{key})(?!([^<]+)?>)/i) do |match|
             count += 1
             "<pixy data-word='#{key}'
                                   data-level='medium'
@@ -62,7 +61,7 @@ module Api
                                 end
 
           when "Elevé"
-            dom.gsub!(/#{key}/i) do |match|
+            dom.gsub!(/(#{key})(?!([^<]+)?>)/i) do |match|
             count += 1
            "<pixy data-level='high' >
                                     #{value['replace']}
