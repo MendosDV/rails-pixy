@@ -1,84 +1,57 @@
-
-
-<%# <div class="container2"> %>
-    <div class="banner">
-      <h1>Vos <strong>enfants</strong> sont votre <strong>priorité</strong>.</h1>
-      <h1>Leur <strong>sécurité</strong> sur internet est la notre.</h1>
-      <div class="button-container">
-        <a href="<%= new_user_session_path %>" class=" join-button">
-          <span class="span-pixy">P!xy</span>
-          <div class="liquid"></div>
-        </a>
-      </div>
-    </div>
-
-  <h2 class="text2" id="text2"><strong>C</strong>onstat</h2>
-  <p class="text3">La protection des enfants face aux contenus inappropriés et vulgaires présents sur Internet est devenue une préoccupation majeure pour les parents. Chez Pixy, nous comprenons cette inquiétude et nous avons développé une solution de contrôle parental avancée pour vous offrir la tranquillité d'esprit dont vous avez besoin.</p>
-
-
-    <div class="container3">
-        <div class="text">
-          <h2 class="text2" id="text2"><strong>S</strong>olutions</h2>
-          <p class="text3">Notre extension propose trois niveaux de sécurité, du faible au élevé, afin de vous permettre de choisir le niveau de protection adapté à vos enfants. Grâce à notre approche bienveillante et axée sur l'éducation positive, vous pouvez laisser vos enfants explorer Internet en toute confiance, sachant qu'ils sont protégés des contenus inappropriés. Offrez-leur un environnement sûr et sain où ils peuvent apprendre, grandir et s'épanouir en toute sécurité.</p>
-        </div>
-
-      <div class="card-container">
-
-        <div class="card-wrapper">
-          <div class="card-low">
-            <%# <i class="fa-solid fa-traffic-light"></i> %>
-            <h5>Faible</h5>
-            <i class="fa-solid fa-shield-halved fa-bounce"></i>
-          </div>
-          <div class="card-paragraph">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-
-        <div class="card-wrapper">
-          <div class="card-medium">
-            <%# <i class="fa-solid fa-traffic-light"></i> %>
-            <h5>Modérée</h5>
-            <i class="fa-solid fa-shield-halved fa-bounce"></i>
-          </div>
-          <div class="card-paragraph">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-
-        <div class="card-wrapper">
-          <div class="card-high">
-            <%# <i class="fa-solid fa-traffic-light"></i> %>
-            <h5>Elevée</h5>
-            <i class="fa-solid fa-shield fa-bounce"></i>
-          </div>
-          <div class="card-paragraph">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  <%# </div> %>
-
-
-      </div>
-
-    </div>
-
-
-  <%# <div class="background">
-  <%# <%= render 'navbar' %>
-
-
-  <div class="container4">
-    <div class="image">
-      <img src="data:image/png;base64,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" alt="Dashboard">
-    </div>
-    <div class="text">
-      <h2 class="text2" id="text2"><strong>U</strong>tilisations</h2>
-      <p class="text3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium doloremque ex delectus accusantium earum aut iusto? Neque quas praesentium similique voluptatem, mollitia exercitationem, atque voluptates unde eius rerum aliquid aspernatur.</p>
+<div class="container2">
+  <div class="banner">
+    <h1>Vos enfants sont votre priorité.</h1>
+    <h1>Leur sécurité sur internet est la nôtre.</h1>
+    <div class="button-container">
+      <a href="<%= new_user_session_path %>" class="join-button">
+        <span class="span-pixy">P!xy</span>
+        <div class="liquid"></div>
+      </a>
     </div>
   </div>
 
-  <%# <script src="/javascript/script.js" type="text/javascript"></script> (à faire vérifier lundi) %>
+  <div class="container3">
+    <div class="text">
+      <h2 class="text2" id="text2"><strong>S</strong>olutions</h2>
+      <p class="text3">Notre extension propose trois niveaux de sécurité, du faible au élevé, afin de vous permettre de choisir le niveau de protection adapté à vos enfants. Grâce à notre approche bienveillante et axée sur l'éducation positive, vous pouvez laisser vos enfants explorer Internet en toute confiance, sachant qu'ils sont protégés des contenus inappropriés. Offrez-leur un environnement sûr et sain où ils peuvent apprendre, grandir et s'épanouir en toute sécurité.</p>
+    </div>
+
+    <div class="card-container">
+      <div class="card-wrapper">
+        <div class="card-low">
+          <i class="fa-solid fa-shield-halved fa-bounce fa-2xl"></i>
+          <h5>Faible</h5>
+        </div>
+        <div class="card-paragraph">
+          <p>Niveau de sécurité faible pour une approche éducative.</p>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-medium">
+          <i class="fa-solid fa-shield-halved fa-bounce fa-2xl"></i>
+          <h5>Modéré</h5>
+        </div>
+        <div class="card-paragraph">
+          <p>Niveau de sécurité modéré avec remplacement des mots et informations.</p>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-high">
+          <i class="fa-solid fa-shield fa-bounce fa-2xl"></i>
+          <h5>Élevé</h5>
+        </div>
+        <div class="card-paragraph">
+          <p>Niveau de sécurité élevé avec remplacement des mots inappropriés.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container4">
+  <div class="image">
+    <img src="https://png.pngtree.com/background/20220721/original/pngtree-intelligent-factory-and-technological-innovation-concept-on-business-and-industrial-process-picture-image_1703611.jpg">
+  </div>
 </div>

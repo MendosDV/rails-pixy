@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: %i[show edit update destroy]
+  before_action :set_words_changed
 
   def index
     @profiles = current_user.profiles
@@ -8,10 +9,9 @@ class ProfilesController < ApplicationController
     @today_visits = Visit.where(date: Date.today)
     @last_seven_days_visits = Visit.where(date: (Date.today - 7.days)..Date.today)
 
-    @words_changed += count
-
+    @words_changed
     @total_words_changed = @today_visits.sum(&:words_changed)
-    @total_words_changed_last_seven_days = @last_seven_days_visits.sum(&:words_changed)
+    #@total_words_changed_last_seven_days = @last_seven_days_visits.sum(&:words_changed)
     #@total_words_changed_percentage = (@total_words_changed / @total_words_changed_last_seven_days) * 100
   end
 
@@ -58,6 +58,10 @@ class ProfilesController < ApplicationController
 
   def set_profile
     @profile = Profile.find(params[:id])
+  end
+
+  def set_words_changed
+    @words_changed = Api::V1::VulgaritiesController.new.words_changed
   end
 
 end

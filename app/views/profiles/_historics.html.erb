@@ -4,13 +4,14 @@
     <li>
       <a href="<%= visit.url %>" target="_blank" class="link-url">
       <span> site: <%= visit.title %></span>
-      ---
       </a>
-      <span> Total de mots modifiés: <%= visit.words_changed %></span>
-       ---
+      ---
+      <p>mots changés: <%= visit.words_changed %></p>
+      ---
       <span> le : <%= visit.date.strftime("%d/%m/%Y à %H:%M") %></span>
     </li>
-  <% end %>
+
+      <% end %>
 </ul>
 
 
