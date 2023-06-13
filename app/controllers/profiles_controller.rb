@@ -8,8 +8,10 @@ class ProfilesController < ApplicationController
     @today_visits = Visit.where(date: Date.today)
     @last_seven_days_visits = Visit.where(date: (Date.today - 7.days)..Date.today)
 
+    @words_changed += count
+
     @total_words_changed = @today_visits.sum(&:words_changed)
-    #@total_words_changed_last_seven_days = @last_seven_days_visits.sum(&:words_changed)
+    @total_words_changed_last_seven_days = @last_seven_days_visits.sum(&:words_changed)
     #@total_words_changed_percentage = (@total_words_changed / @total_words_changed_last_seven_days) * 100
   end
 
