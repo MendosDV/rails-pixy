@@ -58,7 +58,6 @@ module Api
                                   </pixy>")
           end
         end
-        # dom += "<pixy-explication style='position: absolute; display: none;'> </pixy-explication>"
         dom
       end
     end
