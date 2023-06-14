@@ -4,14 +4,22 @@ class ProfilesController < ApplicationController
   def index
     @profiles = current_user.profiles
     @visits = current_user.visits
+    @profile = current_user.profiles.find_by(selected: true)
 
-    @today_visits = Visit.where(date: Date.today)
-    @last_seven_days_visits = Visit.where(date: (Date.today - 7.days)..Date.today)
 
-    @words_changed
-    @total_words_changed = @today_visits.sum(&:words_changed)
-    #@total_words_changed_last_seven_days = @last_seven_days_visits.sum(&:words_changed)
-    #@total_words_changed_percentage = (@total_words_changed / @total_words_changed_last_seven_days) * 100
+    # récupérer toutes les urls visités et mots changés pour l'ensemble des profils
+    @today_profiles_visits = Visit.today.where(profile: @profiles)
+    @today_words_changed = @today_profiles_visits.sum(&:words_changed)
+
+    # pour les 7 derniers jours
+    @last_seven_days_profiles_visits = Visit.week.where(profile: @profiles)
+    @last_seven_days_words_changed = @last_seven_days_profiles_visits.sum(&:words_changed)
+
+
+    # récupérer toutes les urls visités et mots changés pour un seul profil
+    @today_profile_visits = @profile.visits.where("date >= ?", DateTime.current.beginning_of_day)
+    @today_profile_words_changed = @today_profile_visits.sum(&:words_changed)
+
   end
 
   def show
