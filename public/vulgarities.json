@@ -3,19 +3,43 @@
     "replace": "personne désagréable",
     "language": "fr",
     "category": "Grossier",
-    "description": "Cette expression ..."
+    "description": "Ce terme vulgaire peut être remplacé par 'personne désagréable' pour désigner un individu de manière méprisante."
+  },
+  "connards": {
+    "replace": "personnes désagréables",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'personnes désagréables' pour désigner un individu de manière méprisante."
+  },
+  "je me branle": {
+    "replace": "je m'agite",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Cette expression peut être remplacé par 'je m'agite' pour exprimer une notion de mouvement de va-et-vient."
+  },
+  "branlette": {
+    "replace": "agitation",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire peut être remplacé par 'agitation' pour exprimer une notion de mouvement de va-et-vient."
+  },
+  "branlé": {
+    "replace": "perturbé",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'perturbé' pour décrire quelqu'un de déséquilibré ou dérangé."
   },
   "branle": {
     "replace": "agite",
     "language": "fr",
-    "category": "Grossier",
-    "description": "Cette expression désigne une agitation."
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire peut être remplacé par 'agite' pour exprimer une notion de mouvement de va-et-vient."
   },
   "putain": {
-    "replace": "diantre",
+    "replace": "mince",
     "language": "fr",
     "category": "Grossier",
-    "description": "Ce terme vulgaire peut être remplacé par 'diantre' pour exprimer l'étonnement ou la frustration de manière moins offensante."
+    "description": "Ce terme vulgaire peut être remplacé par 'mince' pour exprimer l'étonnement ou la frustration de manière moins offensante."
   },
   "teub": {
     "replace": "pénis",
@@ -29,18 +53,6 @@
     "category": "Grossier",
     "description": "Ce terme vulgaire peut être remplacé par 'uriner' pour décrire l'action d'uriner."
   },
-  "branlette": {
-    "replace": "erreur de jugement",
-    "language": "fr",
-    "category": "Sexuel",
-    "description": "Ce terme vulgaire peut être remplacé par 'erreur de jugement' pour désigner un dérapage ou une action inappropriée."
-  },
-  "branlé": {
-    "replace": "perturbé",
-    "language": "fr",
-    "category": "Grossier",
-    "description": "Ce terme vulgaire peut être remplacé par 'perturbé' pour décrire quelqu'un de déséquilibré ou dérangé."
-  },
   "jouir": {
     "replace": "profiter pleinement",
     "language": "fr",
@@ -52,6 +64,12 @@
     "language": "fr",
     "category": "Sexuel",
     "description": "Ce terme peut être remplacé par 'profité' pour exprimer le fait de profité d'une situation ou d'un plaisir."
+  },
+  "le zizi": {
+    "replace": "l'organe sexuel",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire peut être remplacé par 'l'organe sexuel' pour désigner l'organe sexuel masculin."
   },
   "zizi": {
     "replace": "organe sexuel",
@@ -77,19 +95,31 @@
     "category": "Grossier",
     "description": "Ce terme vulgaire peut être remplacé par 'caleçon' pour désigner un caleçon large ou ample."
   },
-  "encule": {
+  "enculer": {
     "replace": "nuire",
     "language": "fr",
     "category": "Grossier",
     "description": "Ce terme vulgaire peut être remplacé par 'nuire' pour exprimer l'action de causer du tort ou de détruire quelque chose."
   },
-  "ejaculé": {
+  "enculé": {
+    "replace": "nuire",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'nuire' pour exprimer l'action de causer du tort ou de détruire quelque chose."
+  },
+  "encule": {
+    "replace": "nuit",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'nuit' pour exprimer l'action de causer du tort ou de détruire quelque chose."
+  },
+  "éjaculé": {
     "replace": "expulsé",
     "language": "fr",
     "category": "Sexuel",
     "description": "Ce terme vulgaire peut être remplacé par 'expulsé' pour décrire le fait d'éjecter quelque chose."
   },
-  "éjaculé": {
+  "ejaculé": {
     "replace": "expulsé",
     "language": "fr",
     "category": "Sexuel",
@@ -99,6 +129,37 @@
     "replace": "rebelle",
     "language": "fr",
     "category": "Sexuel",
-    "description": "Ce terme vulgaire peut être remplacé par 'rebelle' pour décrire le fait d'éjecter quelque chose."
+    "description": "Ce terme vulgaire peut être remplacé par 'rebelle' ou  'dévergondée' pour décrire une femme de manière méprisante."
+  },
+  "une merde": {
+    "replace": "un problème",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'un excrément' ou 'un problème' selon le sens de la phrase."
+  },
+  "merde": {
+    "replace": "excrément",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'excrément' ou 'problème' selon le sens de la phrase."
+  },
+  "dégage": {
+    "replace": "éloigne",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'un excrément' ou 'un problème' selon le sens de la phrase."
+  },
+  "te-pu®": {
+    "replace": "prostitué",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire peut être remplacé par 'prostitué(s)' pour désigner une femme qui échange des relations sexuelles contre une rémunération."
+  },
+  "pute": {
+    "replace": "prostitué",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire peut être remplacé par 'prostitué(s)' pour désigner une femme qui échange des relations sexuelles contre une rémunération."
   }
+
 }
