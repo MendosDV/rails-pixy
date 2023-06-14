@@ -4,9 +4,11 @@ class ProfilesController < ApplicationController
   def index
     @profiles = current_user.profiles
     @visits = current_user.visits
-    @profile = current_user.profiles.find_by(selected: true)
-
-
+    if params[:toto].present?
+      @profile = @profiles.find(params[:toto])
+    else
+      @profile = current_user.profiles.find_by(selected: true)
+    end
     # récupérer toutes les urls visités et mots changés pour l'ensemble des profils
     @today_profiles_visits = Visit.today.where(profile: @profiles)
     @today_words_changed = @today_profiles_visits.sum(&:words_changed)
