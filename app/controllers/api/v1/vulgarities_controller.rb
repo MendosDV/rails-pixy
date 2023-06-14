@@ -34,37 +34,41 @@ module Api
           when "Faible"
             dom.gsub!(/(#{key})(?!([^<]+)?>)/i) do |match|
               count += 1
-              "<pixy data-level='low'>#{key}</pixy>"
+              "<pixy data-level='low'>
+                #{key}
+                </pixy>"
             end
           when "Modéré"
             dom.gsub!(/(#{key})(?!([^<]+)?>)/i) do |match|
               count += 1
               "<pixy data-word='#{key}'
-                                  data-level='medium'
-                                  data-description='#{value['description']}'>
-                                    #{value['replace']}
-                                    <pixy-explication style='position: absolute; display: none;'>
-                                      <pixy-word>#{key.capitalize}</pixy-word><br><br>
-                                      <pixy-description>#{value['description']}</pixy-description>
-                                    </pixy-explication>
-                                  </pixy>"
+                data-level='medium'
+                data-description='#{value['description']}'>
+                  #{value['replace']}
+                  <pixy-explication style='position: absolute; display: none;'>
+                    <pixy-word>#{key.capitalize}</pixy-word><br><br>
+                    <pixy-description>#{value['description']}</pixy-description>
+                  </pixy-explication>
+                </pixy>"
               end
 
           when "Elevé"
             dom.gsub!(/(#{key})(?!([^<]+)?>)/i) do |match|
               count += 1
               "<pixy data-level='high' >
-                        #{value['replace']}
-                        <pixy-explication style='position: absolute; display: none;'>
-                          <pixy-word>#{key.capitalize}</pixy-word><br><br>
-                          <pixy-description>#{value['description']}</pixy-description>
-                        </pixy-explication>
-                      </pixy>"
+                #{value['replace']}
+              </pixy>"
             end
           end
         end
 
         @visit.update(words_changed: count)
+        dom += "<pixy-warning>
+                  <warning>Avertissement</warning><br><br>
+                  <text>Cette page contient du contenu à caractère vulgaire,
+                  sexuel, discriminant ou dangereux.
+                  </text>
+                </pixy-warning>"
         dom
       end
     end
