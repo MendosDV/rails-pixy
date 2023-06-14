@@ -8,11 +8,8 @@
       ---
       <p>mots changés: <%= visit.words_changed %></p>
       ---
-      <span> le : <%= visit.date.strftime("%d/%m/%Y à %H:%M") %></span>
+      <p> le : <%= visit.date.strftime("%d/%m/%Y à %H:%M") %></p>
     </li>
 
       <% end %>
 </ul>
-
-
-  <%# <span> il y a <%= (Date.today - visit.date).to_i </span> %>

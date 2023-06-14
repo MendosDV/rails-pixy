@@ -1,6 +1,6 @@
 /* Couleurs plus vives */
 :root {
-  --color-primary: grey;  /* Violet */
+  --color-primary: white;  /* Violet */
   --color-secondary: #white;
   --color-accent: #b5838d;  /* vieux rose */
 }
@@ -33,8 +33,8 @@
 }
 
 .card__img {
-  width: 100%;
-  height: 150px;  /* Ajustement de la hauteur pour les photos */
+  width: 50px;
+  height: 50px;  /* Ajustement de la hauteur pour les photos */
   object-fit: cover;
   border-radius: 8px;
 }

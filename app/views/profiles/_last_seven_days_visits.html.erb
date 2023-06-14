@@ -1,6 +1,9 @@
 
-
-   <% @profiles.each do |profile| %>
-    <%= profile.nickname %>
-    <%= profile.visits.week.sum(&:words_changed) %>
-   <% end %>
+<ul>
+  <% @profiles.each do |profile| %>
+    <li>
+      <%= profile.nickname %> :
+      <%= profile.visits.week.sum(&:words_changed) %> mots
+    </li>
+  <% end %>
+</ul>

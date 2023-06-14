@@ -1,15 +1,24 @@
 
-<div class="dashboard container-fluid">
-  <h3>Profils existants</h3>
 
-  <div class="flex">
-      <%= render 'card_profil' %>
-   </div>
+<div class="parent">
 
-   <h3>Infos</h3>
-    <%= render 'card_historic' %>
+  <div class="div1">
+    <%= render 'card_today' %>
+  </div>
+
+  <div class="div2">
+    <%= render 'card_weeks' %>
+  </div>
+
+  <div class="div3">
+    <%= render 'card_profiles' %>
+  </div>
+
+  <div class="div4">
+    <%= render 'card_urls' %>
+  </div>
+
 </div>
-
 
 <%# <!-- app/views/offers/show.html.erb -->
 <% content_for :meta_title, "#{@offer.name} is on #{DEFAULT_META["meta_product_name"]}" %>

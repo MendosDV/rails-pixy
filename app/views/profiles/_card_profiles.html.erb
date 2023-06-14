@@ -1,17 +1,23 @@
 
-<div class="card-profil flex">
+<div class="card-profil">
   <% @profiles.each do |profile| %>
     <div class="card">
-      <% if profile.picture.attached? %>
-        <%= cl_image_tag(profile.picture.key, class: 'card__img') %>
-      <% else %>
-        <%= image_tag 'avatar_default.png', class: 'card__img' %>
-      <% end %>
-        <span class="card__footer">
-          <span><%= profile.nickname %> - <%= (Date.today - profile.birth_date).to_i / 365 %> ans</span>
-          <span><%= profile.category.name %></span>
-        </span>
-        <span class="card__action">
+      <div class= "card_int">
+        <% if profile.picture.attached? %>
+          <%= cl_image_tag(profile.picture.key, class: 'card_img') %>
+        <% else %>
+          <%= image_tag 'avatar_default.png', class: 'card_img' %>
+        <% end %>
+          <div class="card_name">
+              <strong><%= profile.nickname %></strong>-
+              <%= (Date.today - profile.birth_date).to_i / 365 %> ans
+            <div class= "catego">
+              <%= profile.category.name %>
+            </div>
+          </div>
+      </div>
+
+        <span class="card_action">
           <%= link_to edit_profile_path(profile), class: "edit-button" do %>
             <i class="fa-solid fa-pen" style="color: #0d0c0c;"></i>
           <% end %>
