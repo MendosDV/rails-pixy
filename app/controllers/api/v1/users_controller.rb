@@ -7,14 +7,13 @@ module Api
       def index
         render json: {
           user: current_user,
-          profiles: current_user.profiles.map do |profile|
+          profiles: current_user.profiles.sort.map do |profile|
             {
               infos: profile,
               category: profile.category,
               picture: cl_image_tag(profile.picture.key)
             }
           end
-
         }
       end
 
@@ -27,7 +26,6 @@ module Api
         current_profile.update(selected: true)
         current_user.update(current_category_id: current_profile.category_id)
         render json: { content: "ok" }
-        head :ok
       end
     end
   end
