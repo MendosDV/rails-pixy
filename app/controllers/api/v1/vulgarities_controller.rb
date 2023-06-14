@@ -46,7 +46,13 @@ module Api
                 data-description='#{value['description']}'>
                   #{value['replace']}
                   <pixy-explication style='position: absolute; display: none;'>
-                    <pixy-word>#{key.capitalize}</pixy-word><br><br>
+                    <pixy-dico>
+                      <img src='https://3dicons.co/colored.png' width='48vh'>
+                      <dico>Dico des gros mots</dico>
+                    </pixy-dico>
+                    <pixy-word>#{key.capitalize}</pixy-word>
+                    <pipe> | </pipe>
+                    <pixy-category>#{value['category']}</pixy-category><br>
                     <pixy-description>#{value['description']}</pixy-description>
                   </pixy-explication>
                 </pixy>"
