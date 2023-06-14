@@ -10,6 +10,7 @@ module Api
           profiles: current_user.profiles.map do |profile|
             {
               infos: profile,
+              category: profile.category,
               picture: cl_image_tag(profile.picture.key)
             }
           end
