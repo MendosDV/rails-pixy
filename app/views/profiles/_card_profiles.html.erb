@@ -1,8 +1,8 @@
 <div class="card-profil">
 
   <% @profiles.each do |profile| %>
-    <div class="card">
-      <%= link_to  request.params.merge(toto: profile.id) do %>
+    <div class="card <%= 'bordered' if profile.id.to_s == params[:child] %>" >
+      <%= link_to request.params.merge(child: profile.id) do %>
         <div class= "card_int">
             <% if profile.picture.attached? %>
               <%= cl_image_tag(profile.picture.key, class: 'card_img') %>
