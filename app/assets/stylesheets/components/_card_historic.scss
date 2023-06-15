@@ -2,22 +2,14 @@
   .card-hist {
     width: 100%;
     height: 200px;
-    background: #FFFFFF;
-    color:rgba(0, 0, 0, 1);
+    background: #42a5f5;
+
+    color:white;
     border: 2px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
   }
 
-  .card-url {
-    width: 100%;
-    height: 300px;
-    background: #FFFFFF;
-    color:rgba(0, 0, 0, 1);
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 16px;
-  }
 
   .div-title {
     margin-top: 8px;
@@ -29,21 +21,10 @@
     color: rgb(37, 32, 126);
   }
 
-  .div-content {
-    display: flex;
+  .div-content ul {
+    font-size: 1rem;
+    list-style: none;
     margin-top: 8px;
     margin-bottom: 8px;
-    justify-content: left;
-  }
-
-  .div-content {
-    max-height: 80%; /* Définissez la hauteur maximale souhaitée pour le scroll intérieur */
-    overflow-y: auto; /* Ajoutez une barre de défilement verticale lorsque le contenu dépasse la hauteur spécifiée */
-  }
-
-  .link-url {
-    font-family: 'nunito', sans-serif;
-    color: black;
-    font-size: small;
     text-align: left;
   }

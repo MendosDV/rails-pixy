@@ -1,15 +1,27 @@
 
-<ul>
-  <% @profile.visits.last(15).reverse.each do |visit| %>
-    <li>
-      <a href="<%= visit.url %>" target="_blank" class="link-url">
-      <span> site: <%= visit.title %></span>
-      </a>
-      ---
-      <p>mots changés: <%= visit.words_changed %></p>
-      ---
-      <p> le : <%= visit.date.strftime("%d/%m/%Y à %H:%M") %></p>
-    </li>
+<div class="url-list">
 
-      <% end %>
-</ul>
+
+    <p class="left">sites visités</p>
+    <p class="right">mots détectés</p>
+    <p class="right">date</p>
+
+
+  <% @profile.visits.last(15).reverse.each do |visit| %>
+
+      <div class="url-title left">
+        <a href="<%= visit.url %>" target="_blank" class="link-url">
+        <%= visit.title %>
+        </a>
+      </div>
+
+      <div class="url-words right">
+        <%= visit.words_changed %>
+      </div>
+
+      <div class="url-date right">
+        <%= visit.date.strftime("%d/%m/%Y à %H:%M") %>
+      </div>
+
+  <% end %>
+</div>
