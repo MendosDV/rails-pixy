@@ -64,6 +64,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
+  border: 2px solid rgb(0, 255, 51);
 }
 
 .div1 {
@@ -74,13 +75,6 @@
 .div2 {
   grid-column-start: 1;
   grid-column-end: 2;
-}
-
-.div3 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
 }
 
 .div-title {

@@ -1,24 +1,30 @@
+<div class="flex-container">
+  <div class="main">
 
+    <%= render "shared/navbar" %>
 
-<div class="parent">
+    <div class="parent">
 
-  <div class="div1">
-    <%= render 'card_today' %>
+      <div class="div1">
+        <%= render 'card_today' %>
+      </div>
+
+      <div class="div2">
+        <%= render 'card_weeks' %>
+      </div>
+
+      <div class="div4">
+        <%= render 'card_urls' %>
+      </div>
+    </div>
   </div>
 
-  <div class="div2">
-    <%= render 'card_weeks' %>
-  </div>
-
-  <div class="div3">
+  <div class="profils">
+    <h4>Pixy</h4>
     <%= render 'card_profiles' %>
   </div>
-
-  <div class="div4">
-    <%= render 'card_urls' %>
-  </div>
-
 </div>
+
 <%# <!-- app/views/offers/show.html.erb -->
 <% content_for :meta_title, "#{@offer.name} is on #{DEFAULT_META["meta_product_name"]}" %>
 <%# <% content_for :meta_description, @offer.description %>
