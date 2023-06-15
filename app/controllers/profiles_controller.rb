@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
     if params[:child].present?
       @profile = @profiles.find(params[:child])
     else
-      @profile = current_user.profiles.find_by(selected: true)
+      @profile = current_user.profiles.find_by(selected: true) || @profiles.first
     end
     # récupérer toutes les urls visités et mots changés pour l'ensemble des profils
     @today_profiles_visits = Visit.today.where(profile: @profiles)
