@@ -10,7 +10,14 @@
   border: 2px solid red;
 }
 
-
+.flex-container {
+  display: flex;
+  min-height: 100vh;
+  border: 2px solid red;
+  justify-content: space-evenly;
+  gap: 3em;
+  padding: 0 0 0 3em;
+}
 
 // PARAGRAPHE ET CARD LEVEL
 
