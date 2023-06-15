@@ -10,8 +10,8 @@
               <%= image_tag 'avatar_default.png', class: 'card_img' %>
             <% end %>
               <div class="card_name">
-                  <strong><%= profile.nickname %></strong>-
-                  <%= (Date.today - profile.birth_date).to_i / 365 %> ans
+                  <strong><%= profile.nickname %></strong>
+                  <%# <%= (Date.today - profile.birth_date).to_i / 365 %>
                 <div class= "catego">
                   <%= profile.category.name %>
                 </div>

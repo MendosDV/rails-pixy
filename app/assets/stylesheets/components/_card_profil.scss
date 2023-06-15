@@ -16,13 +16,15 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   &.bordered {
-    border: 1px solid blue;
+    border: 1px solid #453de7;
   }
 }
 
 .card_int {
   display: flex;
   align-items: center;
+  color: black;
+
 }
 
 .card_img {
@@ -31,19 +33,15 @@
   height: 50px;  /* Ajustement de la hauteur pour les photos */
   object-fit: cover;
   border-radius: 50px;
+  margin-right: 10px;
 }
 
 .card_name {
-  font-size: small;
-  display: flex;
-  padding: 2px;
-
-  // margin: 4px;
-  margin-top: 10px;
+  font-size: 1rem;
+  padding: 8px;
 }
 
 .catego {
-  display: flex;
   flex-direction: column;
   font-size: 0.8rem;  /* Réduction de la taille de police */
   font-style: italic;
@@ -72,9 +70,6 @@
     margin-bottom: 2rem;
   }
 }
-
-
-
 
 
 

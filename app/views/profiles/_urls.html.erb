@@ -2,9 +2,9 @@
 <div class="url-list">
 
 
-    <p class="left">sites visités</p>
-    <p class="right">mots détectés</p>
-    <p class="right">date</p>
+    <p class="left" id="bottomline">Sites visités</p>
+    <p class="right">Mots détectés</p>
+    <p class="right">Date</p>
 
 
   <% @profile.visits.last(15).reverse.each do |visit| %>
@@ -16,11 +16,18 @@
       </div>
 
       <div class="url-words right">
+        <div class="url-words right">
         <%= visit.words_changed %>
+          <% if visit.words_changed <= 1 %>
+            mot
+          <% else %>
+            mots
+          <% end %>
+        </div>
       </div>
 
       <div class="url-date right">
-        <%= visit.date.strftime("%d-%m / %H:%M") %>
+        <%= visit.date.strftime("%d/%m - %H:%M") %>
       </div>
 
   <% end %>
