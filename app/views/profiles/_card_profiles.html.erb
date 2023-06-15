@@ -1,5 +1,9 @@
 
+
+ <%= image_tag 'sheild-front-color.png', class: 'sheild' %>
+ 
 <div class="card-profil">
+
   <% @profiles.each do |profile| %>
     <div class="card">
       <%= link_to  request.params.merge(toto: profile.id) do %>
