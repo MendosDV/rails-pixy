@@ -64,8 +64,14 @@
 
 .profils {
   background: #fff;
+  position: fixed;
   padding: 3rem;
+  right: 0;
+  top: 0;
+  height: 100vh;
   box-shadow: 0 0 20px #9ea3d452;
+  border-radius: 12px 0 0 0;
+
 
   h4 {
     margin-bottom: 2rem;
