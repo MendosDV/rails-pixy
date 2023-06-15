@@ -3,6 +3,7 @@
 .card-profil {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -10,7 +11,6 @@
   display: flex;
   width: 200px;
   height: 100px;
-  margin: 1rem;
   padding: 1rem;
   background-color: white;
   border-radius: 8px;
@@ -63,18 +63,14 @@
   z-index: 1;
 }
 
-.sheild {
-  width: 30%;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transform: rotate(10deg);
-}
-
 .profils {
   background: #fff;
-  padding: 2em 2em 2em 2em;
+  padding: 3rem;
   box-shadow: 0 0 20px #9ea3d452;
+
+  h4 {
+    margin-bottom: 2rem;
+  }
 }
 
 
