@@ -11,29 +11,29 @@
     "category": "Grossier",
     "description": "Ce terme vulgaire peut être remplacé par 'personnes désagréables' pour désigner un individu de manière méprisante."
   },
-  "je me branle": {
-    "replace": "je m'agite",
-    "language": "fr",
-    "category": "Sexuel",
-    "description": "Cette expression peut être remplacé par 'je m'agite' pour exprimer une notion de mouvement de va-et-vient."
-  },
   "branlette": {
-    "replace": "agitation",
+    "replace": "masturbation",
     "language": "fr",
     "category": "Sexuel",
-    "description": "Ce terme vulgaire peut être remplacé par 'agitation' pour exprimer une notion de mouvement de va-et-vient."
+    "description": "Ce terme vulgaire peut être remplacé par 'masturbation' pour exprimer une excitation manuelle des organes génitaux externes dans le but de provoquer le plaisir sexuel."
+  },
+  "branlant": {
+    "replace": "masturbant",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire peut être remplacé par 'masturbant' pour exprimer une excitation manuelle des organes génitaux externes dans le but de provoquer le plaisir sexuel."
   },
   "branlé": {
-    "replace": "perturbé",
+    "replace": "masturbé",
     "language": "fr",
     "category": "Grossier",
-    "description": "Ce terme vulgaire peut être remplacé par 'perturbé' pour décrire quelqu'un de déséquilibré ou dérangé."
+    "description": "Ce terme vulgaire peut être remplacé par 'masturbé' pour exprimer une excitation manuelle des organes génitaux externes dans le but de provoquer le plaisir sexuel."
   },
   "branle": {
-    "replace": "agite",
+    "replace": "masturbe",
     "language": "fr",
     "category": "Sexuel",
-    "description": "Ce terme vulgaire peut être remplacé par 'agite' pour exprimer une notion de mouvement de va-et-vient."
+    "description": "Ce terme vulgaire peut être remplacé par 'masturbe' pour exprimer une excitation manuelle des organes génitaux externes dans le but de provoquer le plaisir sexuel."
   },
   "putain": {
     "replace": "mince",
@@ -66,10 +66,10 @@
     "description": "Ce terme peut être remplacé par 'profité' pour exprimer le fait de profité d'une situation ou d'un plaisir."
   },
   "le zizi": {
-    "replace": "l'organe sexuel",
+    "replace": "pénis",
     "language": "fr",
     "category": "Sexuel",
-    "description": "Ce terme vulgaire peut être remplacé par 'l'organe sexuel' pour désigner l'organe sexuel masculin."
+    "description": "Ce terme vulgaire peut être remplacé par 'pénis' pour désigner l'organe sexuel masculin."
   },
   "zizi": {
     "replace": "organe sexuel",
@@ -119,11 +119,11 @@
     "category": "Sexuel",
     "description": "Ce terme vulgaire peut être remplacé par 'expulsé' pour décrire le fait d'éjecter quelque chose."
   },
-  "ejaculé": {
-    "replace": "expulsé",
+  "éjaculer": {
+    "replace": "expulser",
     "language": "fr",
     "category": "Sexuel",
-    "description": "Ce terme vulgaire peut être remplacé par 'expulsé' pour décrire le fait d'éjecter quelque chose."
+    "description": "Ce terme vulgaire peut être remplacé par 'expulser' pour décrire le fait d'éjecter quelque chose."
   },
   "salope": {
     "replace": "rebelle",
@@ -160,6 +160,24 @@
     "language": "fr",
     "category": "Sexuel",
     "description": "Ce terme vulgaire peut être remplacé par 'prostitué(s)' pour désigner une femme qui échange des relations sexuelles contre une rémunération."
+  },
+  "clébard": {
+    "replace": "chien",
+    "language": "fr",
+    "category": "Grossier",
+    "description": "Ce terme vulgaire peut être remplacé par 'chien' pour désigner un chien."
+  },
+  "chibre": {
+    "replace": "pénis",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire désigne un pénis."
+  },
+  "chatte": {
+    "replace": "vagin",
+    "language": "fr",
+    "category": "Sexuel",
+    "description": "Ce terme vulgaire désigne un vagin."
   }
 
 }
