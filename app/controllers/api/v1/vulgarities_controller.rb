@@ -7,23 +7,26 @@ module Api
       respond_to :json
       # Cette action récupère dans les params le body/ text, applique replace_vulgarities dessus et renvoie le JSON
       def process_dom
-        dom = params[:dom]
+        body = params[:body]
+        head = params[:head]
         hash = params[:visitedSite]
 
         @visit = Visit.create!(title: hash[:title], url: hash[:url], date: DateTime.current, profile: current_user.profiles.find_by(selected: true))
 
-        unless dom
+        unless body
           return render json: { error: "Une erreur s'est produite lors du traitement du DOM." }, status: :unprocessable_entity
         end
 
-        @replaced_text = replace_vulgarities(dom: dom)
-        render json: { modifiedDOM: @replaced_text }
+        @replaced_body = replace_vulgarities_body(dom: body)
+        @replaced_head = replace_vulgarities_head(dom: head)
+
+        render json: { modifiedBODY: @replaced_body, modifiedHEAD: @replaced_head }
       end
 
       private
 
       # Cette action stock notre hash dans vulgarities
-      def replace_vulgarities(dom:)
+      def replace_vulgarities_body(dom:)
         category = Category.where(id: current_user.current_category_id).first || Category.first
         json_file = File.read(Rails.root.join('public', 'vulgarities.json'))
         hash = JSON.parse(json_file)
@@ -36,7 +39,7 @@ module Api
               count += 1
               "<pixy data-level='low'>
                 #{key}
-                </pixy>"
+              </pixy>"
             end
           when "Modéré"
             dom.gsub!(/(#{key})(?!([^<]+)?>)/i) do |match|
@@ -75,6 +78,19 @@ module Api
                   sexuel, discriminant ou dangereux.
                   </text>
                 </pixy-warning>"
+        dom
+      end
+
+      def replace_vulgarities_head(dom:)
+        json_file = File.read(Rails.root.join('public', 'vulgarities.json'))
+        hash = JSON.parse(json_file)
+
+        hash.each do |key, value|
+          dom.gsub!(/(#{key})(?!([^<]+)?>)/i) do |match|
+            value['replace']
+          end
+        end
+
         dom
       end
     end
