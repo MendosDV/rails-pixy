@@ -4,8 +4,8 @@ class ProfilesController < ApplicationController
   def index
     @profiles = current_user.profiles
     @visits = current_user.visits
-    if params[:toto].present?
-      @profile = @profiles.find(params[:toto])
+    if params[:child].present?
+      @profile = @profiles.find(params[:child])
     else
       @profile = current_user.profiles.find_by(selected: true)
     end
