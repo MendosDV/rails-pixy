@@ -1,8 +1,12 @@
 <ul>
    <% @profiles.each do |profile| %>
     <li>
-      <%= profile.nickname %> :
-      <%= profile.visits.today.sum(&:words_changed) %> mots
+      <div>
+        <%= profile.nickname %>
+      </div>
+      <div style='font-size: 1.3em;'>
+        <%= profile.visits.today.sum(&:words_changed) %> mots
+      </div>
     </li>
    <% end %>
 </ul>

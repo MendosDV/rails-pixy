@@ -1,17 +1,19 @@
 
 .card-url {
   width: 100%;
-  height: 300px;
+  // height: 330px;
   background: #FFFFFF;
   color:rgba(0, 0, 0, 1);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
+  padding-bottom: 12px;
 }
 
 .url-list p {
-  font-size: small;
-  font-style: italic;
-  color: gray;
+  font-size: 1em;
+  font-style: bold;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
 }
 .link-url {
   color: black;
@@ -19,7 +21,7 @@
 }
 
 .url-list {
-  max-height: 80%; /* Définissez la hauteur maximale souhaitée pour le scroll intérieur */
+  max-height: 350px; /* Définissez la hauteur maximale souhaitée pour le scroll intérieur */
   overflow-y: auto; /* Ajoutez une barre de défilement verticale lorsque le contenu dépasse la hauteur spécifiée */
 }
 
@@ -29,12 +31,15 @@
   grid-auto-rows: 1.5rem;
   gap: 8px;
   padding: 0px 20px;
+  position: relative;
+  margin-right: 16px;
+  margin-left: 16px;
+  margin-top: 18px;
   // justify-content: space-around;
 }
 
 .url-title {
   font-size: 1rem;
-  font-weight: bold;
   color: blue;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -55,4 +60,14 @@
 }
 .left {
   text-align: left;
+}
+
+#bottomline::after{
+  content: "";
+  width: calc(100% - 40px);
+  height: 1px;
+  background: #ededed;
+  position: absolute;
+  left: 20px;
+  top: 1.5rem
 }
