@@ -61,6 +61,17 @@ lilia.picture.attach(io: file_lilia, filename: "lilia_q2zbmd.jpg", content_type:
 lilia.save
 
 
+file_lou = URI.open("https://res.cloudinary.com/dmgpqeugv/image/upload/v1686235697/development/pixy/lilia_q2zbmd.jpg")
+lou = Profile.new(
+  nickname: 'L0u',
+  birth_date: '2016-08-05',
+  category: Category.find_by(name: 'Elevé'),
+  user_id: tommy.id
+)
+lou.picture.attach(io: file_lou, filename: "lilia_q2zbmd.jpg", content_type: "image/jpg")
+lou.save
+
+
 puts "creation de visits"
 
 Visit.create(
@@ -82,6 +93,14 @@ Visit.create(
 
 Visit.create(
   profile_id: lilia.id,
+  title: "vikidia.org",
+  url: 'https://fr.vikidia.org/wiki/Lapin',
+  words_changed: 0,
+  date: DateTime.now
+)
+
+Visit.create(
+  profile_id: lou.id,
   title: "vikidia.org",
   url: 'https://fr.vikidia.org/wiki/Lapin',
   words_changed: 0,
