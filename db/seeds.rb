@@ -75,7 +75,7 @@ Visit.create(
   profile_id: bianca.id,
   title: "wikipedia.org",
   url: 'https://fr.wikipedia.org/wiki/Su%C3%A8de',
-  words_changed: 110,
+  words_changed: 3,
   date: DateTime.now
 )
 
@@ -84,6 +84,6 @@ Visit.create(
   profile_id: lilia.id,
   title: "vikidia.org",
   url: 'https://fr.vikidia.org/wiki/Lapin',
-  words_changed: 110,
+  words_changed: 0,
   date: DateTime.now
 )
