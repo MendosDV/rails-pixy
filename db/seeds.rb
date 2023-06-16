@@ -71,7 +71,26 @@ lou = Profile.new(
 lou.picture.attach(io: file_lou, filename: "lilia_q2zbmd.jpg", content_type: "image/jpg")
 lou.save
 
+file_lala = URI.open("https://res.cloudinary.com/dmgpqeugv/image/upload/v1686235697/development/pixy/lilia_q2zbmd.jpg")
+lala = Profile.new(
+  nickname: 'Lala',
+  birth_date: '2012-08-05',
+  category: Category.find_by(name: 'Modéré'),
+  user_id: tommy.id
+)
+lala.picture.attach(io: file_lala, filename: "lilia_q2zbmd.jpg", content_type: "image/jpg")
+lala.save
 
+
+file_lili = URI.open("https://res.cloudinary.com/dmgpqeugv/image/upload/v1686235697/development/pixy/lilia_q2zbmd.jpg")
+lala = Profile.new(
+  nickname: 'Lili',
+  birth_date: '2010-08-05',
+  category: Category.find_by(name: 'Faible'),
+  user_id: tommy.id
+)
+lili.picture.attach(io: file_lili, filename: "lilia_q2zbmd.jpg", content_type: "image/jpg")
+lili.save
 puts "creation de visits"
 
 Visit.create(
@@ -104,5 +123,21 @@ Visit.create(
   title: "vikidia.org",
   url: 'https://fr.vikidia.org/wiki/Lapin',
   words_changed: 0,
+  date: DateTime.now
+)
+
+Visit.create(
+  profile_id: lala.id,
+  title: "vikidia.org",
+  url: 'https://fr.vikidia.org/wiki/Lapin',
+  words_changed: 0,
+  date: DateTime.now
+)
+
+Visit.create(
+  profile_id: lili.id,
+  title: "jeux video.com",
+  url: 'https://www.jeuxvideo.com/forums/42-51-71450961-2-0-1-0-putain-je-me-branle-rarement-mais-quand-je-le-fais.htm',
+  words_changed: 110,
   date: DateTime.now
 )
