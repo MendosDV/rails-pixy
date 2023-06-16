@@ -72,9 +72,18 @@ Visit.create(
 )
 
 Visit.create(
-  profile_id: liam.id,
-  title: "jeux video.com",
-  url: 'https://www.jeuxvideo.com/forums/42-51-71450961-2-0-1-0-putain-je-me-branle-rarement-mais-quand-je-le-fais.htm',
+  profile_id: bianca.id,
+  title: "wikipedia.org",
+  url: 'https://fr.wikipedia.org/wiki/Su%C3%A8de',
+  words_changed: 110,
+  date: DateTime.now
+)
+
+
+Visit.create(
+  profile_id: lilia.id,
+  title: "vikidia.org",
+  url: 'https://fr.vikidia.org/wiki/Lapin',
   words_changed: 110,
   date: DateTime.now
 )
