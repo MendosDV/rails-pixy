@@ -27,7 +27,6 @@ elise.save
 
 puts "creation de profiles"
 
-tommy.profiles.create!(nickname: "Liam", birth_date: "2012-01-01", category: Category.all.sample)
 boby.profiles.create!(nickname: "Lou", birth_date: "2016-01-01", category: Category.all.sample)
 
 file_lucia = URI.open("https://res.cloudinary.com/dmgpqeugv/image/upload/v1686232473/development/pixy/lucia_gsaugx.jpg")
@@ -83,7 +82,7 @@ lala.save
 
 
 file_lili = URI.open("https://res.cloudinary.com/dmgpqeugv/image/upload/v1686235697/development/pixy/lilia_q2zbmd.jpg")
-lala = Profile.new(
+lili = Profile.new(
   nickname: 'Lili',
   birth_date: '2010-08-05',
   category: Category.find_by(name: 'Faible'),
