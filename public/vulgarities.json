@@ -178,6 +178,12 @@
     "language": "fr",
     "category": "Sexuel",
     "description": "Ce terme vulgaire désigne un vagin."
+  },
+  "pd": {
+    "replace": "homosexuel",
+    "language": "fr",
+    "category": "Discriminatoire",
+    "description": "Ce terme vulgaire désigne un homosexuel."
   }
 
 }

@@ -1,8 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <div>
-        <h5>Pixy</h5>
-        <h2>Bienvenue <%= current_user.first_name %>,<br> consultez votre espace personnel</h2>
+         <h5>Pixy</h5>
+        <h2>Bienvenue <%= current_user.first_name %>,<br> consultez votre espace personnel :</h2>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -24,6 +24,7 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Mon compte", profiles_path, class: "dropdown-item" %>
               <%= link_to "Modif. compte", edit_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Retour à l'acceuil", root_path, class: "dropdown-item" %>
               <%= link_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>
