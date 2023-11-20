@@ -1,4 +1,4 @@
-💻 Pixy - Extension Chrome de Protection Parentale
+## 💻 Pixy - Extension Chrome de Protection Parentale
 
 Pixy est une extension Chrome conçue pour aider les parents à protéger leurs enfants des contenus inappropriés en ligne, en détectant et en agissant sur les mots jugés inappropriés. Elle vise à fournir aux parents un outil efficace pour protéger leurs enfants tout en respectant leur liberté de navigation. Nous espérons que cette extension facilitera la supervision en ligne tout en encourageant des discussions ouvertes entre parents et enfants sur l'utilisation responsable d'Internet.
 Le projet a été développé en utilisant JavaScript pour l'extension Chrome et Ruby on Rails pour la partie API et gestion des profils. 
